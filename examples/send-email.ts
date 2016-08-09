@@ -1,5 +1,10 @@
-function sendEmail(contact: Object) {
+interface IEmailable {
+    name: string,
+    email: string
+}
+
+function sendEmail(contact: IEmailable) {
     console.log(contact.name + " <" + contact.email + ">");
 }
 
-sendEmail({fullName: "Deonna Hodges", emailAddress: "dnhodges@gmail.com"});
+sendEmail({name: "Deonna Hodges", email: "dnhodges@gmail.com"});
